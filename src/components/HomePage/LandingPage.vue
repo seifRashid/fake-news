@@ -39,7 +39,7 @@ onMounted(() => {
     />
     <div class="w-full h-screen flex">
       <div
-        class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-3/4 flex flex-col items-center justify-start"
+        class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-11/12 flex flex-col items-center justify-start"
       >
         <div class="flex flex-col text-4xl sm:text-6xl sm:gap-2 font-extrabold">
           <h1 class="stop font-poppins font-black text-pink-400">Stop Spreading</h1>
@@ -75,19 +75,29 @@ onMounted(() => {
           </div>
         </div>
         <!-- next section -->
-        <div class="flex flex-col sm:flex-row items-center justify-start  w-full sm:items-start gap-4 sm:justify-between sm:w-7/8 mx-auto my-32">
-          <div class="flex flex-col w-4/5 mx-auto sm:w-1/2 gap-4 items-start justify-start">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 px-6 sm:ml-52 my-32"
+        >
+          <div class="flex flex-col mx-auto sm:w-1/2 gap-4 items-start justify-start">
             <p class="text-xs font-bold font-poppins text-white">WHAT IS MISCONCEPTION?</p>
-            <p class="sm:text-4xl text-6xl font-bold font-poppins text-pink-400">Defining Misconception</p>
+            <p class="sm:text-4xl text-3xl font-bold font-poppins text-pink-400">
+              Defining Misconception
+            </p>
             <p class="text-white font-poppins text-sm">
               Misinformation is false, inaccurate, or misleading information that is communicated
               regardless of an intention to deceive. Examples of misinformation are false rumors,
               insults, and pranks.
             </p>
           </div>
-          <div class="relative flex flex-col mx-auto sm:ml-32  w-4/5 gap-4 items-start justify-start">
+          <div
+            class="relative flex flex-col mx-auto sm:ml-32 w-4/5 gap-4 items-start justify-start"
+          >
             <div class="tv flex flex-col absolute sm:size-[300px] size-[240px] top-16 sm:top-0">
-              <img src="/public/resources/circle gradient coloured.png" alt="tv" class="absolute left-20 -top-28 sm:-top-32 z-[50]" />
+              <img
+                src="/public/resources/circle gradient coloured.png"
+                alt="tv"
+                class="absolute left-20 -top-28 sm:-top-32 z-[50]"
+              />
               <div class="relative flex flex-col">
                 <img src="/public/resources/tv1.png" alt="tv" class="z-[50]" />
                 <img
@@ -95,10 +105,42 @@ onMounted(() => {
                   class="absolute bottom-[-12px]"
                   alt="shadow"
                 />
+                <img
+                  src="/public/resources/rectangle.png"
+                  alt="tv"
+                  class="absolute rotate-90 left-96 -top-28 sm:top-32 z-[50]"
+                />
               </div>
             </div>
           </div>
         </div>
+        <!-- Our Resources section -->
+        <div
+          class="flex flex-col items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 px-6 mt-64 :mt-32"
+        >
+        <div class="text-center text-pink-400 text-5xl mb-4 sm:text-7xl w-full font-black font-poppins">Our Resources</div>
+        <div class="w-full h-[480px] sm:flex-row flex-col space-y-8 items-center sm:justify-between sm:items-start">
+          <div class="sm:w-1/3 w-full border-2 h-full overflow-hidden">
+            <div class="flex-col">
+              <div class="flex w-full sm:h-76 h-[300px]">
+                <img src="/public/resources/magazine1.png" class="w-full" alt="">
+              </div>
+              <div class="bg-pink-400 h-[180px] flex-col p-8 sm:p-6">
+                <p class="font-bold text-white text-xl" >LOREM IPSUM DOLA SIT AMET</p>
+                <div class="bg-white text-pink-400 text-sm font-bold text-center p-3 w-1/2 mt-3">DISCOVER</div>
+              </div>
+            </div>
+          </div>
+          <div class="sm:w-1/3 w-full flex gap-8 sm:flex-col">
+            <div class="w-full h-[220px] border-2"></div>
+            <div class="w-full h-[220px] border-2"></div>
+          </div>
+          <div class="sm:w-1/3 w-full flex gap-8 flex-col">
+            <div class="w-full h-[220px] border-2"></div>
+            <div class="w-full h-[220px] border-2"></div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>
