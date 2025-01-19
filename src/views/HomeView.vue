@@ -1,5 +1,5 @@
 <script setup>
-import LandingPage from '@/components/HomePage/LandingPage.vue';
+import LandingPage from '@/components/HomePage/LandingPage.vue'
 import { gsap } from 'gsap'
 import { onMounted } from 'vue'
 
@@ -10,7 +10,8 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="mainPg" >
-    <LandingPage/>
+  <main class="mainPg overflow-hidden">
+    <LandingPage />
+    <!-- section after landing page -->
   </main>
 </template>

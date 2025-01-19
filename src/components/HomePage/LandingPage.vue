@@ -4,15 +4,17 @@ import { onMounted } from 'vue'
 
 onMounted(() => {
   const tl = gsap.timeline()
-  tl.from('.tv', { y:1000, opacity:0 , duration:1 ,ease:'bounce.out'})
-  tl.from('.stop', { x:1000, opacity:0 , duration:1 ,ease:'back'})
-  tl.from('.mis1', { x:-1000, opacity:0 , duration:1 ,ease:'back'}, "<")
-  tl.from('.circlebw', { x:-1000, opacity:0 , duration:1 ,ease:'back'}, "<")
-  tl.from('.circleclr', { x:1000, opacity:0 , duration:1 ,ease:'back'}, "<")
+  tl.from('.tv', { y: 1000, opacity: 0, duration: 1, ease: 'bounce.out' })
+  tl.from('.stop', { x: 1000, opacity: 0, duration: 1, ease: 'back' })
+  tl.from('.mis1', { x: -1000, opacity: 0, duration: 1, ease: 'back' }, '<')
+  tl.from('.circlebw', { x: -1000, opacity: 0, duration: 1, ease: 'back' }, '<')
+  tl.from('.circleclr', { x: 1000, opacity: 0, duration: 1, ease: 'back' }, '<')
 })
 </script>
 <template>
-  <div class="absolute w-full h-auto flex flex-col bg-slate-900 overflow-hidden pt-10 -z-10 top-0">
+  <div
+    class="absolute w-full h-[5000px] flex flex-col bg-slate-900 pt-10 -z-10 top-0 overflow-y-hidden overflow-x-hidden"
+  >
     <!-- Landing page -->
     <img
       src="/public/resources/rectangle.png"
@@ -27,7 +29,7 @@ onMounted(() => {
     <img src="/public/resources/dash-rt.png" class="absolute size-[30px] sm:size-[50px]" alt="" />
     <img
       src="/public/resources/circle gradient coloured.png"
-      class="circleclr absolute -bottom-2 sm:-bottom-40 -left-[250px] size-[360px] sm:size-[500px]"
+      class="circleclr absolute top-2 sm:top-40 -left-[250px] size-[360px] sm:size-[500px]"
       alt=""
     />
     <img
@@ -52,7 +54,9 @@ onMounted(() => {
           </div>
         </div>
         <div class="flex flex-col gap-2 mt-32 sm:mt-48">
-          <p class="px-4 font-poppins font-regular sm:px-36 text-center text-white text-sm sm:text-md">
+          <p
+            class="px-4 font-poppins font-regular sm:px-36 text-center text-white text-sm sm:text-md"
+          >
             Join a full-packed webinar on how to combat misinformation, often associated with ‘fake
             news’ which some scholars define as "fabricated information that mimics news media
             content in form but not in organizational process or intent"
@@ -68,6 +72,31 @@ onMounted(() => {
             >
               JOIN NOW
             </button>
+          </div>
+        </div>
+        <!-- next section -->
+        <div class="flex flex-col sm:flex-row items-center justify-start  w-full sm:items-start gap-4 sm:justify-between sm:w-7/8 mx-auto my-32">
+          <div class="flex flex-col w-4/5 mx-auto sm:w-1/2 gap-4 items-start justify-start">
+            <p class="text-xs font-bold font-poppins text-white">WHAT IS MISCONCEPTION?</p>
+            <p class="sm:text-4xl text-6xl font-bold font-poppins text-pink-400">Defining Misconception</p>
+            <p class="text-white font-poppins text-sm">
+              Misinformation is false, inaccurate, or misleading information that is communicated
+              regardless of an intention to deceive. Examples of misinformation are false rumors,
+              insults, and pranks.
+            </p>
+          </div>
+          <div class="relative flex flex-col mx-auto sm:ml-32  w-4/5 gap-4 items-start justify-start">
+            <div class="tv flex flex-col absolute sm:size-[300px] size-[240px] top-16 sm:top-0">
+              <img src="/public/resources/circle gradient coloured.png" alt="tv" class="absolute left-20 -top-28 sm:-top-32 z-[50]" />
+              <div class="relative flex flex-col">
+                <img src="/public/resources/tv1.png" alt="tv" class="z-[50]" />
+                <img
+                  src="/public/resources/shadow.png"
+                  class="absolute bottom-[-12px]"
+                  alt="shadow"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
