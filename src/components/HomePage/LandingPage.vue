@@ -40,9 +40,9 @@ onMounted(() => {
         class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-3/4 flex flex-col items-center justify-start"
       >
         <div class="flex flex-col text-4xl sm:text-6xl sm:gap-2 font-extrabold">
-          <h1 class="stop text-pink-400">Stop Spreading</h1>
-          <h1 class="mis1 text-white">Misinformation</h1>
-          <h1 class="mis2 text-pink-400">Misinformation</h1>
+          <h1 class="stop font-poppins font-black text-pink-400">Stop Spreading</h1>
+          <h1 class="mis1 font-poppins font-black text-white">Misinformation</h1>
+          <h1 class="mis2 font-poppins font-black text-pink-400">Misinformation</h1>
         </div>
         <!-- tv and shadow -->
         <div class="tv flex flex-col absolute sm:size-[300px] size-[180px] top-16 sm:top-24">
@@ -52,7 +52,7 @@ onMounted(() => {
           </div>
         </div>
         <div class="flex flex-col gap-2 mt-32 sm:mt-48">
-          <p class="px-4 sm:px-36 text-center text-white text-sm sm:text-md">
+          <p class="px-4 font-poppins font-regular sm:px-36 text-center text-white text-sm sm:text-md">
             Join a full-packed webinar on how to combat misinformation, often associated with ‘fake
             news’ which some scholars define as "fabricated information that mimics news media
             content in form but not in organizational process or intent"
