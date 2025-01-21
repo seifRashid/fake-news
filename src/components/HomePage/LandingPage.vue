@@ -1,5 +1,6 @@
 <script setup>
 import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onMounted } from 'vue'
 
 onMounted(() => {
@@ -9,7 +10,55 @@ onMounted(() => {
   tl.from('.mis1', { x: -1000, opacity: 0, duration: 1, ease: 'back' }, '<')
   tl.from('.circlebw', { x: -1000, opacity: 0, duration: 1, ease: 'back' }, '<')
   tl.from('.circleclr', { x: 1000, opacity: 0, duration: 1, ease: 'back' }, '<')
+
+  gsap.registerPlugin(ScrollTrigger)
+
+  const tr = gsap.timeline()
+  tr.to('.box', {
+    scrollTrigger: {
+      trigger: '.box',
+      start: 'top 80%',
+      end: 'bottom 50%',
+      scrub: true, // Links the animation progress to scroll progress
+      markers: true,
+    },
+    // x: 300, // Move 300px to the right
+    color: 'green',
+    y: 10,
+    duration: 3,
+  })
+  // tr.from('.box', {
+  //   scrollTrigger: {
+  //     trigger: '.box', // Element to trigger the animation
+  //     start: 'top 95%', // When the top of the box reaches 80% of the viewport height
+  //     end: 'bottom 20%', // Animation ends when the bottom of the box is 50% of the viewport height
+  //     toggleActions: 'play pause resume reset', // Play animation, pause, and reset based on scroll
+  //   },
+  //   opacity: 0, // Start from invisible
+  //   x: 100, // Start from 100px below
+  //   duration: 1,// Animation duration
+  //   ease: 'bounce.out' // Animation easing
+  // })
+  // .to('.box', {
+  //   scrollTrigger: {
+  //     trigger: '.box', // Element to trigger the animation
+  //     start: 'top 15%', // When the top of the box reaches 80% of the viewport height
+  //     end: 'bottom 5%', // Animation ends when the bottom of the box is 50% of the viewport height
+  //     toggleActions: 'play pause resume reset', // Play animation, pause, and reset based on scroll
+  //   },
+  //   opacity: 100, // Start from invisible
+  //   x: -1000, // Start from 100px below
+  //   duration: 1,// Animation duration
+  //   ease: 'bounce.in' // Animation easing
+  // })
 })
+
+function growStop() {
+  gsap.to('.stop', { scale: 2, duration: 1, ease: 'back.in', repeat: 1, yoyo: true })
+}
+function growTv() {
+  gsap.to('.tv', { scale: 2, duration: 1, ease: 'back.in', repeat: 1, yoyo: true })
+}
 </script>
 <template>
   <div
@@ -42,12 +91,20 @@ onMounted(() => {
         class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-11/12 flex flex-col items-center justify-start"
       >
         <div class="flex flex-col text-4xl sm:text-6xl sm:gap-2 font-extrabold">
-          <h1 class="stop font-poppins font-black text-pink-400">Stop Spreading</h1>
+          <h1
+            @mouseover="growStop()"
+            class="stop font-poppins font-black text-pink-400 cursor-pointer"
+          >
+            Stop Spreading
+          </h1>
           <h1 class="mis1 font-poppins font-black text-white">Misinformation</h1>
           <h1 class="mis2 font-poppins font-black text-pink-400">Misinformation</h1>
         </div>
         <!-- tv and shadow -->
-        <div class="tv flex flex-col absolute sm:size-[300px] size-[180px] top-16 sm:top-24">
+        <div
+          @mouseover="growTv()"
+          class="tv flex flex-col absolute sm:size-[300px] size-[180px] top-16 sm:top-24"
+        >
           <div class="relative flex flex-col">
             <img src="/public/resources/tv-landingPage.png" alt="tv" class="z-[50]" />
             <img src="/public/resources/shadow.png" class="absolute bottom-[-12px]" alt="shadow" />
@@ -92,7 +149,7 @@ onMounted(() => {
           <div
             class="relative flex flex-col mx-auto sm:ml-32 w-4/5 gap-4 items-start justify-start"
           >
-            <div class="tv flex flex-col absolute sm:size-[300px] size-[240px] top-16 sm:top-0">
+            <div class="flex flex-col absolute sm:size-[300px] size-[240px] top-16 sm:top-0">
               <img
                 src="/public/resources/circle gradient coloured.png"
                 alt="tv"
@@ -118,29 +175,37 @@ onMounted(() => {
         <div
           class="flex flex-col items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 px-6 mt-64 :mt-32"
         >
-        <div class="text-center text-pink-400 text-5xl mb-4 sm:text-7xl w-full font-black font-poppins">Our Resources</div>
-        <div class="w-full h-[480px] sm:flex-row flex-col space-y-8 items-center sm:justify-between sm:items-start">
-          <div class="sm:w-1/3 w-full border-2 h-full overflow-hidden">
-            <div class="flex-col">
-              <div class="flex w-full sm:h-76 h-[300px]">
-                <img src="/public/resources/magazine1.png" class="w-full" alt="">
-              </div>
-              <div class="bg-pink-400 h-[180px] flex-col p-8 sm:p-6">
-                <p class="font-bold text-white text-xl" >LOREM IPSUM DOLA SIT AMET</p>
-                <div class="bg-white text-pink-400 text-sm font-bold text-center p-3 w-1/2 mt-3">DISCOVER</div>
+          <div
+            class="box text-center text-pink-400 text-5xl mb-4 sm:text-7xl w-full font-black font-poppins"
+          >
+            Our Resources
+          </div>
+          <div
+            class="w-full h-[480px] sm:flex-row flex-col space-y-8 items-center sm:justify-between sm:items-start"
+          >
+            <div class="sm:w-1/3 w-full border-2 h-full overflow-hidden">
+              <div class="flex-col">
+                <div class="flex w-full sm:h-76 h-[300px]">
+                  <img src="/public/resources/magazine1.png" class="w-full" alt="" />
+                </div>
+                <div class="bg-pink-400 h-[180px] flex-col p-8 sm:p-6">
+                  <p class="font-bold text-white text-xl">LOREM IPSUM DOLA SIT AMET</p>
+                  <div class="bg-white text-pink-400 text-sm font-bold text-center p-3 w-1/2 mt-3">
+                    DISCOVER
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="sm:w-1/3 w-full flex gap-8 sm:flex-col">
-            <div class="w-full h-[220px] border-2"></div>
-            <div class="w-full h-[220px] border-2"></div>
-          </div>
-          <div class="sm:w-1/3 w-full flex gap-8 flex-col">
-            <div class="w-full h-[220px] border-2"></div>
-            <div class="w-full h-[220px] border-2"></div>
+            <div class="sm:w-1/3 w-full flex gap-8 sm:flex-col">
+              <div class="w-full h-[220px] border-2"></div>
+              <div class="w-full h-[220px] border-2"></div>
+            </div>
+            <div class="sm:w-1/3 w-full flex gap-8 flex-col">
+              <div class="w-full h-[220px] border-2"></div>
+              <div class="w-full h-[220px] border-2"></div>
+            </div>
           </div>
         </div>
-      </div>
       </div>
     </div>
   </div>
