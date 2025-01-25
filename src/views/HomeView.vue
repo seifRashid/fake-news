@@ -1,7 +1,8 @@
 <script setup>
-import FirstAfterLP from '@/components/HomePage/FirstAfterLP.vue';
+import AfterOurResources from '@/components/HomePage/AfterOurResources.vue'
+import FirstAfterLP from '@/components/HomePage/FirstAfterLP.vue'
 import LandingPage from '@/components/HomePage/LandingPage.vue'
-import OurResources from '@/components/HomePage/OurResources.vue';
+import OurResources from '@/components/HomePage/OurResources.vue'
 import { gsap } from 'gsap'
 import { onMounted } from 'vue'
 
@@ -19,20 +20,18 @@ onMounted(() => {
       <LandingPage />
       <!-- next section -->
       <div
-        class="flex flex-col sm:flex-row items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 px-6 sm:ml-52 my-32"
+        class="flex flex-col sm:flex-row items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 px-6 sm:ml-52 sm:my-32 mb-32"
       >
-        <FirstAfterLP/>
+        <FirstAfterLP />
       </div>
       <!-- Our Resources section -->
       <div
         class="flex flex-col items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 sm:mx-auto px-6 mt-60 sm:mt-32"
       >
-        <OurResources/>
+        <OurResources />
       </div>
+      <!-- Section after Our Resources -->
+      <AfterOurResources/>
     </div>
-    <!-- Section after Our Resources -->
-    <!-- <div
-        class="h-[500px] bg-white flex flex-col items-center justify-start w-full sm:items-start gap-4 sm:justify-between sm:w-11/12 sm:mx-auto px-6 mt-60 sm:mt-32"
-      ></div> -->
   </main>
 </template>
