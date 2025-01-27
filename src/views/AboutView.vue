@@ -5,7 +5,6 @@
       <h1 ref="heroTitle" class="text-4xl font-bold">Welcome to GSAP Animation</h1>
       <p ref="heroDescription" class="text-lg mt-4">Scroll down to see the magic!</p>
       <div ref="mouse" class="text-start cursor-pointer absolute"></div>
-      <div ref="mouse" class="text-start cursor-pointer absolute"></div>
     </header>
 
     <!-- Animated Circle -->
