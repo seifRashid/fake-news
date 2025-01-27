@@ -13,6 +13,9 @@ const handleScroll = () => {
     if (elementTop < windowHeight * 0.75) {
       isVisible.value = true;
     }
+    else if (elementTop < windowHeight * 0.5) {
+      isVisible.value = false;
+    }
   }
 };
 
