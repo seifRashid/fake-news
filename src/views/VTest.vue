@@ -1,14 +1,17 @@
 <script setup>
 import FirstTest from '@/components/HomePage/FirstTest.vue';
 import VMyAnimation from '@/components/HomePage/ScrollAnimationTest/VMyAnimation.vue';
+import WithGsap from '@/components/HomePage/ScrollAnimationTest/WithGsap.vue';
 import SecondTest from '@/components/HomePage/SecondTest.vue';
 import SlideInWithDelay from '@/components/HomePage/SlideInWithDelay.vue';
 
 </script>
 <template>
   <!-- First animation -->
-   <FirstTest/>
-   <SecondTest/>
-   <SlideInWithDelay/>
+
+  <FirstTest/>
+  <SecondTest/>
+  <WithGsap/>
+  <SlideInWithDelay/>
    <VMyAnimation/>
 </template>

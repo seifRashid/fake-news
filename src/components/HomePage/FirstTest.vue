@@ -13,9 +13,6 @@ const handleScroll = () => {
     if (elementTop < windowHeight * 0.75) {
       isVisible.value = true;
     }
-    else if (elementTop < windowHeight * 0.5) {
-      isVisible.value = false;
-    }
   }
 };
 
@@ -27,15 +24,15 @@ onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll);
 });
 </script>
+
 <template>
   <div class="h-screen flex flex-col items-center justify-center">
     <div
       ref="animatedElement"
-      class="opacity-0 transition-opacity duration-1000"
-      :class="{ 'opacity-100': isVisible }"
+      class="opacity-0 translate-x-[200px] transition-all duration-1000 ease-in"
+      :class="{ 'opacity-100 translate-x-[0px]': isVisible }"
     >
       <p class="text-4xl font-bold">Scroll Down to See Me!</p>
     </div>
   </div>
 </template>
-

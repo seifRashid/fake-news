@@ -8,7 +8,7 @@
       class="opacity-0 transform transition-all duration-1000"
       :class="{
         'opacity-100 translate-x-0 scale-100': item.isVisible,
-        '-translate-x-10 scale-90': !item.isVisible,
+        '-translate-x-96 scale-90': !item.isVisible,
       }"
       :style="`transition-delay: ${index * 200}ms;`"
     >
