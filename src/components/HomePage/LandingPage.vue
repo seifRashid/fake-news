@@ -27,30 +27,7 @@ onMounted(() => {
     y: 10,
     duration: 3,
   })
-  // tr.from('.box', {
-  //   scrollTrigger: {
-  //     trigger: '.box', // Element to trigger the animation
-  //     start: 'top 95%', // When the top of the box reaches 80% of the viewport height
-  //     end: 'bottom 20%', // Animation ends when the bottom of the box is 50% of the viewport height
-  //     toggleActions: 'play pause resume reset', // Play animation, pause, and reset based on scroll
-  //   },
-  //   opacity: 0, // Start from invisible
-  //   x: 100, // Start from 100px below
-  //   duration: 1,// Animation duration
-  //   ease: 'bounce.out' // Animation easing
-  // })
-  // .to('.box', {
-  //   scrollTrigger: {
-  //     trigger: '.box', // Element to trigger the animation
-  //     start: 'top 15%', // When the top of the box reaches 80% of the viewport height
-  //     end: 'bottom 5%', // Animation ends when the bottom of the box is 50% of the viewport height
-  //     toggleActions: 'play pause resume reset', // Play animation, pause, and reset based on scroll
-  //   },
-  //   opacity: 100, // Start from invisible
-  //   x: -1000, // Start from 100px below
-  //   duration: 1,// Animation duration
-  //   ease: 'bounce.in' // Animation easing
-  // })
+
 })
 
 function growStop() {
@@ -69,13 +46,13 @@ function growTv() {
   />
   <img
     src="/public/resources/circle gradient bw.png"
-    class="circlebw absolute -right-48 sm:-right-52 sm:-top-2 size-[360px] sm:size-[480px]"
+    class="circlebw absolute -right-40 top-48 sm:-right-52 sm:-top-2 size-[300px] sm:size-[480px]"
     alt=""
   />
   <img src="/public/resources/dash-rt.png" class="absolute size-[30px] sm:size-[50px]" alt="" />
   <img
     src="/public/resources/circle gradient coloured.png"
-    class="circleclr absolute top-2 sm:top-40 -left-[250px] size-[360px] sm:size-[500px]"
+    class="circleclr absolute top-2 sm:top-40 -left-[200px] size-[300px] sm:size-[500px]"
     alt=""
   />
   <img
@@ -85,7 +62,7 @@ function growTv() {
   />
   <div class="w-full h-screen flex">
     <div
-      class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-11/12 flex flex-col items-center justify-start"
+      class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-11/12 flex flex-col items-center justify-center sm:justify-start"
     >
       <div class="flex flex-col text-4xl sm:text-6xl sm:gap-2 font-extrabold">
         <h1
@@ -102,7 +79,7 @@ function growTv() {
         @mouseover="growTv()"
         class="tv flex flex-col absolute sm:size-[300px] size-[180px] top-16 sm:top-24"
       >
-        <div class="relative flex flex-col">
+        <div class="relative flex flex-col sm:mt-0 mt-24">
           <img src="/public/resources/tv-landingPage.png" alt="tv" class="z-[50]" />
           <img src="/public/resources/shadow.png" class="absolute bottom-[-12px]" alt="shadow" />
         </div>
