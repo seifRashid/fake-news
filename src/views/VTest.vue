@@ -1,4 +1,6 @@
 <script setup>
+import SplineTest from '@/components/HomePage/SplineTest.vue';
+
 import FirstTest from '@/components/HomePage/FirstTest.vue';
 import VMyAnimation from '@/components/HomePage/ScrollAnimationTest/VMyAnimation.vue';
 import WithGsap from '@/components/HomePage/ScrollAnimationTest/WithGsap.vue';
@@ -14,4 +16,5 @@ import SlideInWithDelay from '@/components/HomePage/SlideInWithDelay.vue';
   <WithGsap/>
   <SlideInWithDelay/>
    <VMyAnimation/>
+   <SplineTest/>
 </template>
