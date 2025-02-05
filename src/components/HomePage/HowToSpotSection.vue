@@ -5,7 +5,7 @@
     <div class="sm:w-1/2 w-full sm:text-7xl text-5xl text-pink-400 font-poppins font-bold">
       How to Spot <span class="text-white">Misinformation?</span>
     </div>
-    <div class="sm:flex-row flex flex-col justify-between items-start h-[600px] w-full sm:mt-20 mt-4">
+    <div class="sm:flex-row flex flex-col justify-between items-start h-[600px] w-full sm:mt-20 mr-8">
       <div class="sm:w-1/2 w-full mr-4 flex flex-col justify-even h-auto">
         <div class="w-full sm:h-[200px] sm:p-8 py-4 px-2">
           <div class="flex items-start gap-3">

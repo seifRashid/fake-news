@@ -64,7 +64,7 @@ function growTv() {
     <div
       class="relative mx-auto w-full mt-10 sm:mt-5 sm:w-11/12 flex flex-col items-center justify-center sm:justify-start"
     >
-      <div class="flex flex-col text-4xl sm:text-6xl sm:gap-2 font-extrabold">
+      <div class="flex flex-col text-5xl sm:text-6xl gap-3 sm:gap-2 font-extrabold">
         <h1
           @mouseover="growStop()"
           class="stop font-poppins font-black text-pink-400 cursor-pointer"
@@ -77,7 +77,7 @@ function growTv() {
       <!-- tv and shadow -->
       <div
         @mouseover="growTv()"
-        class="tv flex flex-col absolute sm:size-[300px] size-[180px] top-16 sm:top-24"
+        class="tv flex flex-col absolute sm:size-[300px] size-[220px] top-16 sm:top-24"
       >
         <div class="relative flex flex-col sm:mt-0 mt-24">
           <img src="/public/resources/tv-landingPage.png" alt="tv" class="z-[50]" />
