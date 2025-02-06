@@ -1,22 +1,22 @@
 <script setup>
-import HowToSpotSection from './HowToSpotSection.vue';
+import HowToSpotSection from './HowToSpotSection.vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { onMounted } from 'vue'
+import ReportingMissInformation from './ReportingMissInformation.vue'
 
-onMounted(()=>{
+onMounted(() => {
   gsap.registerPlugin(ScrollTrigger)
- gsap.to('.pin',{
-  scrollTrigger:{
-    trigger:'.pin',
-    start: 'top',
-    end: 'bottom',
-    scrub:true,
-    pin:true
-  }
- })
+  gsap.to('.pin', {
+    scrollTrigger: {
+      trigger: '.pin',
+      start: 'top',
+      end: 'bottom',
+      scrub: true,
+      pin: true,
+    },
+  })
 })
-
 </script>
 <template>
   <div
@@ -57,5 +57,6 @@ onMounted(()=>{
     </div>
   </div>
   <!-- Another section -->
-  <HowToSpotSection/>
+  <HowToSpotSection />
+  <ReportingMissInformation />
 </template>
