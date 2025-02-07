@@ -32,6 +32,7 @@ onMounted(()=>{
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/test">Test</RouterLink>
+        <RouterLink to="/canvas">Canvas</RouterLink>
       </nav>
     </div>
   </header>

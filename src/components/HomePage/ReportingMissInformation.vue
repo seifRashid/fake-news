@@ -7,7 +7,7 @@ onMounted(() => {
   gsap.from('.pin2', {
     x: 2000,
     scrollTrigger: {
-      trigger: '.pin2',
+      trigger: '.pin3',
       start: 'top 1%',
       end: 'bottom 1%',
       scrub: true,

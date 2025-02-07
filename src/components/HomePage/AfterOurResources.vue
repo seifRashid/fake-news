@@ -57,6 +57,6 @@ onMounted(() => {
     </div>
   </div>
   <!-- Another section -->
-  <HowToSpotSection />
+  <HowToSpotSection class="pin3" />
   <ReportingMissInformation />
 </template>
